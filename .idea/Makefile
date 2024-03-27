@@ -1,6 +1,8 @@
 PREFIX ?= /usr/local
 PROJECT_FLAGS=-DMASSDNS_REVISION=\"$(shell git describe --tags --dirty=+)\"
 
+
+
 all:
 	mkdir -p bin
 	$(CC) $(CFLAGS) $(CPPFLAGS) $(LDFLAGS) $(PROJECT_FLAGS) -O3 -std=c11 -DHAVE_EPOLL -DHAVE_SYSINFO -Wall -fstack-protector-strong src/main.c -o bin/massdns

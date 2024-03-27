@@ -4,6 +4,7 @@ import argparse
 import os
 import sys
 
+
 parser = argparse.ArgumentParser(description='Subdomain enumeration list generator.')
 parser.add_argument('domain', nargs='*', help='Domain to append.')
 parser.add_argument('subdomain_file', type=str, help='Subdomain file to append to.')
